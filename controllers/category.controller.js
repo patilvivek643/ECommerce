@@ -12,16 +12,6 @@ const Category = db.category;
  * POST: Create and save a new category
 */
 exports.create = (req, res) => {
-    /**
-     * Validation of request body
-    */
-   
-    if(!req.body.name) {
-        res.status(400).send( {
-            message: "Name of the category can't be empty !"
-        })
-        return;
-    }
 
     /**
      * Creation of the category object to be stored in the db.
@@ -162,4 +152,4 @@ exports.delete = (req, res) => {
             message: "Some internal error while deleting the category based on id"
         })
     })
-} 
+}
